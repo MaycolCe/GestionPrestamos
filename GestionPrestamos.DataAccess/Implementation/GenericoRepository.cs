@@ -14,12 +14,10 @@ namespace GestionPrestamos.DataAccess.Implementation
 	public class GenericoRepository<T> : IGenericoRepository<T> where T : class
 	{
 		public readonly GestionPrestamosDbContext _context;
-		public IMapper _mapper;
 
-		public GenericoRepository(GestionPrestamosDbContext context, IMapper mapper)
+		public GenericoRepository(GestionPrestamosDbContext context)
         {
 			_context = context;
-			_mapper = mapper;
 		}
 
 

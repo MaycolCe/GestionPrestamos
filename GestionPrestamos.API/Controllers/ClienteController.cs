@@ -17,14 +17,7 @@ namespace GestionPrestamos.API.Controllers
 			_unitOfWork = unitOfWork;
 		}
 
-        // GET: api/<ClienteController>
-        [HttpGet]
-		public ActionResult  GetCliente()
-		{
-			var clientes = _unitOfWork.Cliente.GetAllCliente();
-			return Ok(clientes);
-		}
-
+        // GET: api/<ClienteController>        
 		[HttpGet("Prestamos")]
 		public ActionResult GetWithPrestamo() 
 		{
@@ -32,4 +25,4 @@ namespace GestionPrestamos.API.Controllers
 			return Ok(clientes);
 		}
 	}
-}
+} 

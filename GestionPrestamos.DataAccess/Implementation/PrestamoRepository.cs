@@ -12,7 +12,7 @@ namespace GestionPrestamos.DataAccess.Implementation
 {
 	public class PrestamoRepository : GenericoRepository<Prestamo>, IPrestamoRepository
 	{
-		public PrestamoRepository(GestionPrestamosDbContext context, IMapper mapper) : base(context, mapper)
+		public PrestamoRepository(GestionPrestamosDbContext context) : base(context)
 		{
 		}
 	}

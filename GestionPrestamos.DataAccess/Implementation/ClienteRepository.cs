@@ -15,31 +15,14 @@ using System.Threading.Tasks;
 
 namespace GestionPrestamos.DataAccess.Implemetation
 {
-	public class ClienteRepository : GenericoRepository<ClienteDto>, IClienteRepository
+	public class ClienteRepository : GenericoRepository<Cliente>, IClienteRepository
 	{
-		public ClienteRepository(GestionPrestamosDbContext context, IMapper mapper) : base(context, mapper) { }
+		public ClienteRepository(GestionPrestamosDbContext context) : base(context) { }
 
-		public IEnumerable<ClienteDto> GetClientesConPrestamos()
+		public IEnumerable<Cliente> GetClientesConPrestamos()
 		{
-			return _context.Cliente
-				.ProjectTo<ClienteDto>(_mapper.ConfigurationProvider)
-				.ToList();
-		}
-
-		public IEnumerable<ClienteDto> GetAllCliente()
-		{
-			return _context.Cliente
-				.ProjectTo<ClienteDto>(_mapper.ConfigurationProvider, c => new {
-					c.ClienteId,
-					c.Nombre,
-					Prestamo = c.Prestamo.Select(p => new PrestamoDto
-					{
-						PrestamoId = p.PrestamoId,
-						CantidadPago = p.CantidadPago
-						// Otros campos que quieras mapear
-					})
-				})
-				.ToList();
+			var clientesConPrestamos = _context.Cliente.Include(u => u.Prestamo).ToList();
+			return clientesConPrestamos;
 		}
 	}
 

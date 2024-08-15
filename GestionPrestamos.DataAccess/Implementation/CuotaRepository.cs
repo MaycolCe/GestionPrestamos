@@ -12,7 +12,7 @@ namespace GestionPrestamos.DataAccess.Implementation
 {
 	public class CuotaRepository : GenericoRepository<Cuota>, ICuotaRepository 
 	{
-		public CuotaRepository(GestionPrestamosDbContext context, IMapper mapper) : base(context, mapper)
+		public CuotaRepository(GestionPrestamosDbContext context) : base(context)
 		{
 		}
 	}

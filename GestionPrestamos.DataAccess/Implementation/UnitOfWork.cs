@@ -14,16 +14,14 @@ namespace GestionPrestamos.DataAccess.Implementation
 	public class UnitOfWork : IUnitOfWork
 	{
         private readonly GestionPrestamosDbContext _context;
-        private IMapper _mapper;
 
-        public UnitOfWork(GestionPrestamosDbContext context, IMapper mapper)
+        public UnitOfWork(GestionPrestamosDbContext context)
         {
             _context = context;
-            _mapper = mapper;
 
-            Cliente = new ClienteRepository(_context, mapper);
-            Cuota = new CuotaRepository(_context, mapper);
-            Prestamo = new PrestamoRepository(_context, mapper);
+            Cliente = new ClienteRepository(_context);
+            Cuota = new CuotaRepository(_context);
+            Prestamo = new PrestamoRepository(_context);
         }
 
         public IClienteRepository Cliente { get; private set; }

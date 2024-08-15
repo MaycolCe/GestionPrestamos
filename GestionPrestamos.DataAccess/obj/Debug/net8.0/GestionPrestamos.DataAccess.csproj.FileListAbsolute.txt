@@ -15,3 +15,4 @@ C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.D
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.pdb
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.genruntimeconfig.cache
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\ref\GestionPrestamos.DataAccess.dll
+C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.sourcelink.json

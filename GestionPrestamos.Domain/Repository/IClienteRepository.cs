@@ -1,5 +1,4 @@
-﻿using GestionPrestamos.Domain.DTO;
-using GestionPrestamos.Domain.Entities;
+﻿using GestionPrestamos.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace GestionPrestamos.Domain.Repository
 {
-	public interface IClienteRepository : IGenericoRepository<ClienteDto>
+	public interface IClienteRepository : IGenericoRepository<Cliente>
 	{
-		IEnumerable<ClienteDto> GetClientesConPrestamos();
-
-		IEnumerable<ClienteDto> GetAllCliente();		
+		IEnumerable<Cliente> GetClientesConPrestamos();
 	}
 }
