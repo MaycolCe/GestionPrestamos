@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionPrestamos.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f2359232afe4140df784eb9673756ed058fe96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e2055c647392bae8b022240134e3d368480f384")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionPrestamos.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionPrestamos.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

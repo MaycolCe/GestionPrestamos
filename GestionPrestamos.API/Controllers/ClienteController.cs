@@ -24,5 +24,12 @@ namespace GestionPrestamos.API.Controllers
 			var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
 			return Ok(clientes);
 		}
+
+		[HttpGet("Clientes")]
+		public ActionResult Get()
+		{
+			var clientes = _unitOfWork.Cliente.GetAll();
+			return Ok(clientes);
+		}
 	}
 } 
