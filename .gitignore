@@ -3,3 +3,45 @@
 .vs/GestionarPrestamos/FileContentIndex/1bf0ac72-3030-4f43-b08e-fc2950eec24a.vsidx
 .vs/GestionarPrestamos/FileContentIndex/f70bf7e1-cab0-46ab-80c5-e57f7c94cd71.vsidx
 .vs/GestionarPrestamos/FileContentIndex/13f98de2-4f2a-4c15-bd7c-293a5841fd25.vsidx
+.vs/GestionarPrestamos/FileContentIndex/3a1a35d8-b0c6-4418-a6ee-61736cdab9ea.vsidx
+.vs/ProjectEvaluation/gestionarprestamos.metadata.v7.bin
+/.vs
+.vs/ProjectEvaluation/gestionarprestamos.metadata.v9.bin
+.vs/ProjectEvaluation/gestionarprestamos.metadata.v7.bin
+.vs/ProjectEvaluation/gestionarprestamos.projects.v9.bin
+.vs/ProjectEvaluation/gestionarprestamos.strings.v9.bin
+*.bin
+*.bin
+# Archivos binarios de compilación
+/bin/
+/obj/
+
+# Configuración de usuario para Visual Studio
+.vscode/
+.vs/
+
+# Dependencias y paquetes NuGet
+/packages/
+*.nupkg
+*.snupkg
+
+# Archivos temporales de construcción
+*.log
+*.tmp
+*.temp
+*.TMP
+
+# Configuración del entorno
+.env
+
+# Archivos de configuración específicos del sistema operativo
+*.DS_Store
+Thumbs.db
+
+# Archivos de bloqueo
+*.lock
+
+# Archivos generados por el sistema operativo
+*.DS_Store
+*.swp
+*.swo

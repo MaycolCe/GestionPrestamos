@@ -18,5 +18,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionPrestamos.API.Controllers.ClienteController",
+    "Method": "clientes",
+    "RelativePath": "api/Cliente/prueba",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using GestionPrestamos.Domain.DTO;
 using GestionPrestamos.Domain.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,25 +12,40 @@ namespace GestionPrestamos.API.Controllers
 	public class ClienteController : ControllerBase
 	{
 		private readonly IUnitOfWork _unitOfWork;
+		private readonly IMapper _mapper;
 
 		public ClienteController(IUnitOfWork unitOfWork, IMapper mapper)
         {
 			_unitOfWork = unitOfWork;
+			_mapper = mapper;
 		}
 
         // GET: api/<ClienteController>        
 		[HttpGet("Prestamos")]
 		public ActionResult GetWithPrestamo() 
 		{
+			//consulta directa a la entidad 
+			//var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
+			//return Ok(clientes);
+
+			//consulta con automapper
 			var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
-			return Ok(clientes);
+			// Mapear la lista de clientes a una lista de ClienteDto
+			var clientesDto = _mapper.Map<List<ClienteDto>>(clientes);
+			return Ok(clientesDto);
 		}
 
 		[HttpGet("Clientes")]
 		public ActionResult Get()
 		{
 			var clientes = _unitOfWork.Cliente.GetAll();
-			return Ok(clientes);
+			// Mapear la lista de clientes a una lista de ClienteDto
+			var clientesDto = _mapper.Map<List<ClienteDto>>(clientes);
+			return Ok(clientesDto);
+		}
+
+		
+
 		}
 	}
 } 

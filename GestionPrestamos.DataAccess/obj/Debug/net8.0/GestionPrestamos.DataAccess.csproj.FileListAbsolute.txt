@@ -9,10 +9,10 @@ C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.D
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.AssemblyInfoInputs.cache
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.AssemblyInfo.cs
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.csproj.CopyComplete
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\refint\GestionPrestamos.DataAccess.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.pdb
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.genruntimeconfig.cache
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\ref\GestionPrestamos.DataAccess.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionPrestamos.DataAccess.sourcelink.json
+C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.DataAccess\obj\Debug\net8.0\GestionP.486E1099.Up2Date

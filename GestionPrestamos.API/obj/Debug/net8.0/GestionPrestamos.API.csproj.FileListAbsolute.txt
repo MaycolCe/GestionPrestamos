@@ -48,7 +48,6 @@ C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.A
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -133,7 +132,6 @@ C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.A
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.GestionPrestamos.API.props
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\scopedcss\bundle\GestionPrestamos.API.styles.css
-C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\GestionPrestamos.API.csproj.CopyComplete
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\GestionPrestamos.API.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\refint\GestionPrestamos.API.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\GestionPrestamos.API.pdb
@@ -141,3 +139,4 @@ C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.A
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\ref\GestionPrestamos.API.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\GestionPrestamos.API.sourcelink.json
+C:\Users\Maycol\Desktop\GestionarPrestamos\GestionarPrestamos\GestionPrestamos.API\obj\Debug\net8.0\GestionP.3263144D.Up2Date
