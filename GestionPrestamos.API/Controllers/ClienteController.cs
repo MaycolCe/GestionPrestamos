@@ -44,7 +44,11 @@ namespace GestionPrestamos.API.Controllers
 			return Ok(clientesDto);
 		}
 
-		
+		[HttpGet("prueba")]
+		public ActionResult clientes()
+		{
+			var result = _mapper.Map<List<ClienteDto>>(_unitOfWork.Cliente.GetAll());
+			
 
 		}
 	}

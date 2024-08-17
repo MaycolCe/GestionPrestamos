@@ -45,3 +45,6 @@ Thumbs.db
 *.DS_Store
 *.swp
 *.swo
+
+# Configuración del entorno y archivos de usuario de Visual Studio
+.vs/
