@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "voGaVomJ+Cg=",
+  "dgSpecHash": "FkfzcvtsVuM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Maycol\\Desktop\\GestionarPrestamos\\GestionarPrestamos\\GestionPrestamos.Web\\GestionPrestamos.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Maycol\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

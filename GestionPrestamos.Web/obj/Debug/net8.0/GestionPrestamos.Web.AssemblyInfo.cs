@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionPrestamos.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5224aeee36818dcff9c7336f1f2014f8582e4999")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cbe5d185d3468d5a86098d74da434d4d02a37d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionPrestamos.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionPrestamos.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
