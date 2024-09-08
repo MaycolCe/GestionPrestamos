@@ -47,6 +47,7 @@ namespace GestionPrestamos.API.Controllers
 		[HttpGet("prueba")]
 		public ActionResult clientes()
 		{
+			//consulta el automapper trae la lista de clientes y lista todos los clientes GETALL que es el metodo del repositorio generico
 			var result = _mapper.Map<List<ClienteDto>>(_unitOfWork.Cliente.GetAll());
 			return Ok(result);
 
