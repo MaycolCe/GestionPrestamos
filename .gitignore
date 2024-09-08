@@ -48,3 +48,21 @@ Thumbs.db
 
 # Configuración del entorno y archivos de usuario de Visual Studio
 .vs/
+
+# Ignorar las carpetas de compilación
+bin/
+obj/
+
+# Ignorar los archivos de configuración de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar los resultados de compilación
+*.exe
+*.dll
+*.pdb
+
+# Ignorar paquetes de NuGet
+*.nupkg
