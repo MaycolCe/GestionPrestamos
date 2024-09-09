@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionPrestamos.DataAccess
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionPrestamos.API", "GestionPrestamos.API\GestionPrestamos.API.csproj", "{9CC96329-253F-4E49-8F31-DDEA897EB37C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionPrestamos.Web", "GestionPrestamos.Web\GestionPrestamos.Web.csproj", "{DFDE2706-6E73-480A-BE67-D8FEB7649E32}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{9CC96329-253F-4E49-8F31-DDEA897EB37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CC96329-253F-4E49-8F31-DDEA897EB37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CC96329-253F-4E49-8F31-DDEA897EB37C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFDE2706-6E73-480A-BE67-D8FEB7649E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFDE2706-6E73-480A-BE67-D8FEB7649E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFDE2706-6E73-480A-BE67-D8FEB7649E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFDE2706-6E73-480A-BE67-D8FEB7649E32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
