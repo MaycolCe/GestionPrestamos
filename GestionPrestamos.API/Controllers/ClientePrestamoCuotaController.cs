@@ -22,22 +22,9 @@ namespace GestionPrestamos.API.Controllers
         [HttpGet("ClienteCuota")]
         public ActionResult GetCuota()
         {
-            //consulta con automapper
-            //var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
-            //// Mapear la lista de clientes a una lista de ClienteDto
-            //var clientesDto = _mapper.Map<List<ClienteConPrestamoDto>>(clientes);
-            //return Ok(clientesDto);
-
             var cuota = _unitOfWork.Cuota.GetClientesPrestamoCuota();
             var cuotaDto = _mapper.Map<List<ClientePrestamoCuotaDto>>(cuota);
             return Ok(cuotaDto);
-
-
-                //consulta con automapper
-                //var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
-                //// Mapear la lista de clientes a una lista de ClienteDto
-                //var clientesDto = _mapper.Map<List<ClienteConPrestamoDto>>(clientes);
-                //return Ok(clientesDto);
         }
     }
 }
