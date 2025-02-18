@@ -15,16 +15,32 @@ using System.Threading.Tasks;
 
 namespace GestionPrestamos.DataAccess.Implemetation
 {
-	public class ClienteRepository : GenericoRepository<Cliente>, IClienteRepository
-	{
-		public ClienteRepository(GestionPrestamosDbContext context) : base(context) { }
+    public class ClienteRepository : GenericoRepository<Cliente>, IClienteRepository
+    {
+        public ClienteRepository(GestionPrestamosDbContext context) : base(context) { }
 
-		public IEnumerable<Cliente> GetClientesConPrestamos()
-		{
-			var clientesConPrestamos = _context.Cliente.Include(u => u.Prestamo).ToList();
-			return clientesConPrestamos;
-		}
-	}
+        public IEnumerable<Cliente> GetClientesConPrestamos()
+        {
+            var clientesConPrestamos = _context.Cliente.Include(u => u.Prestamo).ToList();
+            return clientesConPrestamos;
+        }
 
+        public IList<Cliente> PruebaClientes()
+        {
+
+            var clientesConPrestamos = _context.Cliente
+            .Select(cliente => new Cliente
+            {
+                ClienteId = cliente.ClienteId,
+                Nombre = cliente.Nombre,
+                Prestamo = _context.Prestamo
+                    .Where(presta => presta.ClienteId == cliente.ClienteId)
+                    .ToList()
+            });
+
+            return clientesConPrestamos.ToList();
+        }
+
+    }
 
 }

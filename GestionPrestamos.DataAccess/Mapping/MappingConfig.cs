@@ -20,6 +20,8 @@ namespace GestionPrestamos.Domain
 				config.CreateMap<Cuota, CuotaDto>().ReverseMap();
 				config.CreateMap<Interes, InteresDto>().ReverseMap();
 				config.CreateMap<Pagos, PagosDto>().ReverseMap();
+				config.CreateMap<Cliente, ClienteConPrestamoDto>();
+				config.CreateMap<Cuota, ClientePrestamoCuotaDto>();
 			});
 			return mappingConfig;
 		}

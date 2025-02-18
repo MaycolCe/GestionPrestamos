@@ -55,5 +55,11 @@ namespace GestionPrestamos.DataAccess.Implementation
 		{
 			_context.Set<T>().RemoveRange(entities);
 		}
-	}
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+        }
+
+    }
 }

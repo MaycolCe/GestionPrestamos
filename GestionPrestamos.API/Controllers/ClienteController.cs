@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using GestionPrestamos.Domain.DTO;
+using GestionPrestamos.Domain.Entities;
 using GestionPrestamos.Domain.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,14 +25,10 @@ namespace GestionPrestamos.API.Controllers
 		[HttpGet("Prestamos")]
 		public ActionResult GetWithPrestamo() 
 		{
-			//consulta directa a la entidad 
-			//var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
-			//return Ok(clientes);
-
 			//consulta con automapper
 			var clientes = _unitOfWork.Cliente.GetClientesConPrestamos();
 			// Mapear la lista de clientes a una lista de ClienteDto
-			var clientesDto = _mapper.Map<List<ClienteDto>>(clientes);
+			var clientesDto = _mapper.Map<List<ClienteConPrestamoDto>>(clientes);
 			return Ok(clientesDto);
 		}
 
@@ -52,5 +49,55 @@ namespace GestionPrestamos.API.Controllers
 			return Ok(result);
 
 		}
-	}
+
+		[HttpPost("CrearCliente")]
+		//el dto trae los prestamos, arreglar
+		public ActionResult<ClienteDto> CreateCliente([FromBody] ClienteDto clienteDto) 
+		{
+			if (clienteDto == null) 
+			{
+				return BadRequest("El cliente no puede ser nulo");
+			}
+			var cliente = _mapper.Map<Cliente>(clienteDto);
+            //var nuevoCliente = _unitOfWork.Cliente.Add(Cliente);
+			_unitOfWork.Cliente.Add(cliente);
+
+            _unitOfWork.Save();
+
+            var clienteCreado = _unitOfWork.Cliente.GetById(cliente.ClienteId);
+            var clienteCreadoDto = _mapper.Map<ClienteDto>(clienteCreado);
+            //var clienteCreadoDto = _mapper.Map<ClienteDto>(nuevoCliente);
+
+			return Ok(clienteCreadoDto);
+		}
+
+        [HttpPut("ActualizarCliente/{clienteId}")]
+        public ActionResult ActualizarCliente(int clienteId, [FromBody] ClienteDto clienteDto)
+        {
+            if (clienteDto == null)
+            {
+                return BadRequest("El cliente no puede ser nulo");
+            }
+
+            // Verificar si el cliente existe en la base de datos
+            var clienteExistente = _unitOfWork.Cliente.GetById(clienteId);
+            if (clienteExistente == null)
+            {
+                return NotFound($"El cliente con ID {clienteId} no fue encontrado.");
+            }
+
+            // Mapear los datos del DTO al cliente existente
+            _mapper.Map(clienteDto, clienteExistente);
+
+            // Actualizar el cliente en el repositorio
+            _unitOfWork.Cliente.Update(clienteExistente);
+
+            // Guardar los cambios
+            _unitOfWork.Save();
+
+            return NoContent(); // HTTP 204: Actualización exitosa, sin contenido
+        }
+
+
+    }
 } 

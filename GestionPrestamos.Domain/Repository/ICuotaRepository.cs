@@ -9,5 +9,6 @@ namespace GestionPrestamos.Domain.Repository
 {
 	public interface ICuotaRepository : IGenericoRepository<Cuota>
 	{
-	}
+        IEnumerable<Cuota> GetClientesPrestamoCuota();
+    }
 }

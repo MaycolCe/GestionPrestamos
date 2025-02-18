@@ -22,6 +22,8 @@ namespace GestionPrestamos.DataAccess.Implementation
             Cliente = new ClienteRepository(_context);
             Cuota = new CuotaRepository(_context);
             Prestamo = new PrestamoRepository(_context);
+            Interes = new InteresRepository(_context);
+            Pagos = new PagosRepository(_context);
         }
 
         public IClienteRepository Cliente { get; private set; }

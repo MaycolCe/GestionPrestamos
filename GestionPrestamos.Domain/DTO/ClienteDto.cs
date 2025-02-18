@@ -22,6 +22,6 @@ namespace GestionPrestamos.Domain.DTO
 
 		public string Apellido { get; set; } = string.Empty;
 
-		public List<PrestamoDto>? Prestamo { get; set; }
+		//public List<PrestamoDto>? Prestamo { get; set; }
 	}
 }

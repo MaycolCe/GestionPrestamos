@@ -24,5 +24,5 @@ namespace GestionPrestamos.Domain.Entities
 		public string Apellido { get; set; } = string.Empty;
 
 		public List<Prestamo>? Prestamo { get; set; }
-	}
+    }
 }

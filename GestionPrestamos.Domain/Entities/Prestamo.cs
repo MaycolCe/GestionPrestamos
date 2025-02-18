@@ -28,7 +28,8 @@ namespace GestionPrestamos.Domain.Entities
 		public decimal TotalPrestamo { get; set; }
 
 		//public Cliente Cliente { get; set; }
-		[NotMapped]
-		public ClienteDto Cliente { get; set; }
-	}
+		//[NotMapped]
+		public Cliente Cliente { get; set; }        
+
+    }
 }

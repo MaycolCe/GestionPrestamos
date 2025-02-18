@@ -1,0 +1,6 @@
+@GestionarPrestamos.Server_HostAddress = http://localhost:5235
+
+GET {{GestionarPrestamos.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

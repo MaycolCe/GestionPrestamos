@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestionPrestamos.Domain.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,5 +24,7 @@ namespace GestionPrestamos.Domain.Entities
 		public DateTime FechaPagoCuota { get; set; }
 
 		public decimal ValorCuota { get; set; }
+        public Prestamo? Prestamo { get; set; }
+		//public Cliente? Cliente { get; set; }
 	}
 }

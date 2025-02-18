@@ -8,6 +8,18 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuración de CORS
+builder.Services.AddCors(options =>
+{
+    //si se quiere activar las cors a ciertas rutas determinas debera ponerse en el controller  [EnableCors("AllowReactApp")]
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000") // Dominio de tu aplicación React
+              .AllowAnyHeader()                   // Permite cualquier encabezado
+              .AllowAnyMethod();                  // Permite cualquier método (GET, POST, etc.)
+    });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -29,6 +41,9 @@ builder.Services.AddMvc()
 				.AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 var app = builder.Build();
+
+// Habilita CORS antes de mapear controladores
+app.UseCors("AllowReactApp");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
