@@ -41,7 +41,20 @@ namespace GestionPrestamos.API.Controllers
 			return Ok(clientesDto);
 		}
 
-		[HttpGet("prueba")]
+		[HttpGet("ClienteId/{clienteId}")]
+		public ActionResult GetCliente(int clienteId) 
+		{
+            var clienteExistente = _unitOfWork.Cliente.GetById(clienteId);
+
+            if (clienteExistente == null)
+            {
+                return BadRequest("El cliente no puede ser nulo");
+            }
+
+            return Ok(clienteExistente);
+        }
+
+        [HttpGet("prueba")]
 		public ActionResult clientes()
 		{
 			//consulta el automapper trae la lista de clientes y lista todos los clientes GETALL que es el metodo del repositorio generico
