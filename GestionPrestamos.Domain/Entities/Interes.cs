@@ -19,5 +19,7 @@ namespace GestionPrestamos.Domain.Entities
 		public decimal InteresGenerado { get; set; }
 
 		public decimal InteresMora { get; set; }
-	}
+
+        public Prestamo? Prestamo { get; set; }
+    }
 }
