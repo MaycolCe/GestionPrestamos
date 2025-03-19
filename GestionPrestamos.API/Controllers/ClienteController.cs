@@ -111,6 +111,5 @@ namespace GestionPrestamos.API.Controllers
             return NoContent(); // HTTP 204: Actualización exitosa, sin contenido
         }
 
-
     }
 } 

@@ -26,5 +26,5 @@ namespace GestionPrestamos.Domain.Entities
 		public decimal ValorCuota { get; set; }
         public Prestamo? Prestamo { get; set; }
 		//public Cliente? Cliente { get; set; }
-	}
+    }
 }

@@ -11,6 +11,7 @@ namespace GestionPrestamos.Domain.Repository
 	public interface IClienteRepository : IGenericoRepository<Cliente>
 	{
 		IEnumerable<Cliente> GetClientesConPrestamos();
-		IList<Cliente> PruebaClientes();
+
+        IList<Cliente> PruebaClientes();
     }
 }

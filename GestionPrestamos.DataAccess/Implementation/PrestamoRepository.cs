@@ -17,17 +17,26 @@ namespace GestionPrestamos.DataAccess.Implementation
 		{
 		}
 
-		public IEnumerable<Prestamo> GetPrestamoClienteCuota() 
-		{
-            var clientesPrestamosCuota = _context.Prestamo.Include(u => u.Cliente)
-				.Include(u => u.Interes)
-				.Include(u => u.Cuota)
-      //         .Include(c => c.Interes)
-			   //.Include(c => c.Cuota)			   
-			   //.Include(c => c.Cliente) no esta retornando
-               .ToList();
+        //public IEnumerable<Prestamo> GetPrestamoClienteCuota() 
+        //{
+        //          var clientesPrestamosCuota = _context.Prestamo.Include(u => u.Cliente)
+        //		.Include(u => u.Interes)
+        //		.Include(u => u.Cuota)
+        //		//.Where(u => u.Cuota.Any())
+        //	   .ToList();
 
-            return clientesPrestamosCuota;
+        //          return clientesPrestamosCuota;
+        //      }
+
+        public IEnumerable<Prestamo> GetPrestamoClienteCuota()
+        {
+            var clientesPrestamosCuota = from p in _context.Prestamo
+                                         join c in _context.Cliente on p.ClienteId equals c.ClienteId
+                                         join cu in _context.Cuota on p.PrestamoId equals cu.PrestamoId
+                                         join i in _context.Interes on cu.PrestamoId equals i.PrestamoId
+                                         select p;  // Retorna solo Prestamo
+
+            return clientesPrestamosCuota.ToList(); // Convierte en lista para materializar la consulta
         }
 
     }

@@ -31,7 +31,7 @@ namespace GestionPrestamos.Domain.Entities
 		//[NotMapped]
 		public Cliente Cliente { get; set; }
 		//public ICollection<Cliente> Cliente { get; set; }
-		public List<Interes> Interes { get; set; }
-        public List<Cuota> Cuota { get; set; }
-    }
+		public Interes Interes { get; set; }
+		public Cuota Cuota { get; set; }
+	}
 }
