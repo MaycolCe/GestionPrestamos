@@ -9,25 +9,6 @@ namespace GestionPrestamos.Domain.DTO
 {
     public class PrestamoClienteCuotaDto
     {
-        //public int PrestamoId { get; set; }
-
-        //public int ClienteId { get; set; }
-
-        //public DateTime FechaPrestamo { get; set; }
-
-        //public DateTime FechaRegistro { get; set; }
-
-        //public decimal CantidadPago { get; set; }
-
-        //public decimal Total { get; set; }
-
-        //public decimal? AbonoCapital { get; set; }
-
-        //public decimal TotalPrestamo { get; set; }
-
-        //public Interes Interes { get; set; }
-        //public Cuota Cuota { get; set; }
-        //public Cliente Cliente { get; set; }
         public int PrestamoId { get; set; }
         public int ClienteId { get; set; }
         public DateTime FechaPrestamo { get; set; }
