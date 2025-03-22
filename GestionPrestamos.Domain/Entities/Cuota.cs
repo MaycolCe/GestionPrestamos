@@ -19,12 +19,12 @@ namespace GestionPrestamos.Domain.Entities
 
 		public int CuotasRestantes { get; set; }
 
-		public int PagosId { get; set; }
+		public int? PagosId { get; set; }
 
 		public DateTime FechaPagoCuota { get; set; }
 
 		public decimal ValorCuota { get; set; }
         public Prestamo? Prestamo { get; set; }
-		//public Cliente? Cliente { get; set; }
+        //public Cliente? Cliente { get; set; }
     }
 }

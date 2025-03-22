@@ -37,9 +37,42 @@ namespace GestionPrestamos.API.Controllers
             {
                 return BadRequest("El cliente no puede ser nulo");
             }
-            //var clienteCreado = _unitOfWork.Cliente.GetById(cliente.ClienteId);
-            //var clienteCreadoDto = _mapper.Map<ClienteDto>(clienteCreado);
+            // Verificar si el cliente existe
+            var cliente = _unitOfWork.Cliente.Find(c => c.ClienteId == prestamoClienteCuotaDto.ClienteId).FirstOrDefault();
+            if (cliente == null)
+            {
+                return BadRequest("El cliente no existe.");
+            }
+
             var prestamoCliente = _mapper.Map<Prestamo>(prestamoClienteCuotaDto);
+            prestamoCliente.Cliente = cliente;
+
+            // Crear y agregar Interes
+            var interes = new Interes
+            {
+                Capital = prestamoClienteCuotaDto.Capital,
+                PorcentajeInteres = prestamoClienteCuotaDto.PorcentajeInteres,
+                InteresGenerado = prestamoClienteCuotaDto.InteresGenerado,
+                InteresMora = prestamoClienteCuotaDto.InteresMora
+            };
+
+            _unitOfWork.Interes.Add(interes);
+            prestamoCliente.Interes = interes; // Asignar el interés al préstamo
+
+            // Crear y agregar Cuota
+            var cuota = new Cuota
+            {
+                CantidadCuotas = prestamoClienteCuotaDto.CantidadCuotas,
+                CuotasPagadas = prestamoClienteCuotaDto.CuotasPagadas,
+                CuotasRestantes = prestamoClienteCuotaDto.CuotasRestantes,
+                FechaPagoCuota = prestamoClienteCuotaDto.FechaPagoCuota,
+                ValorCuota = prestamoClienteCuotaDto.ValorCuota
+            };
+            _unitOfWork.Cuota.Add(cuota);
+            prestamoCliente.Cuota = cuota; // Asignar la cuota al préstamo
+
+            // Agregar el préstamo con sus relaciones
+            _unitOfWork.Prestamo.Add(prestamoCliente);
 
             //var nuevoPrestamoCliente = _unitOfWork.Prestamo.Add(prestamoCliente);
             _unitOfWork.Prestamo.Add(prestamoCliente);
@@ -56,6 +89,7 @@ namespace GestionPrestamos.API.Controllers
             var prestamoCreadoDto = _mapper.Map<PrestamoClienteCuotaDto>(prestamoCliente);
             return Ok(prestamoCreadoDto);
         }
+
     }
 }
 

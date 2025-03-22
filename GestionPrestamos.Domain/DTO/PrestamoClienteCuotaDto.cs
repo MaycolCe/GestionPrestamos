@@ -35,7 +35,7 @@ namespace GestionPrestamos.Domain.DTO
 
         public int CuotasRestantes { get; set; }
 
-        public int PagosId { get; set; }
+        public int? PagosId { get; set; }
 
         public DateTime FechaPagoCuota { get; set; }
 

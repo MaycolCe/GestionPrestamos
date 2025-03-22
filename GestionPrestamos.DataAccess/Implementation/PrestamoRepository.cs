@@ -17,16 +17,16 @@ namespace GestionPrestamos.DataAccess.Implementation
 		{
 		}
 
-        //public IEnumerable<Prestamo> GetPrestamoClienteCuota() 
+        //public IEnumerable<Prestamo> GetPrestamoClienteCuota()
         //{
-        //          var clientesPrestamosCuota = _context.Prestamo.Include(u => u.Cliente)
-        //		.Include(u => u.Interes)
-        //		.Include(u => u.Cuota)
-        //		//.Where(u => u.Cuota.Any())
-        //	   .ToList();
+        //    var clientesPrestamosCuota = _context.Prestamo.Include(u => u.Cliente)
+        //  .Include(u => u.Interes)
+        //  .Include(u => u.Cuota)
+        // //.Where(u => u.Cuota.Any())
+        // .ToList();
 
-        //          return clientesPrestamosCuota;
-        //      }
+        //    return clientesPrestamosCuota;
+        //}
 
         public IEnumerable<Prestamo> GetPrestamoClienteCuota()
         {
@@ -35,6 +35,15 @@ namespace GestionPrestamos.DataAccess.Implementation
                                          join cu in _context.Cuota on p.PrestamoId equals cu.PrestamoId
                                          join i in _context.Interes on cu.PrestamoId equals i.PrestamoId
                                          select p;  // Retorna solo Prestamo
+
+            foreach (var item in clientesPrestamosCuota)
+            {
+                var prestamo = _context.Prestamo
+                 .Include(p => p.Cliente)  
+                 .Include(p => p.Cuota)    
+                 .Include(p => p.Interes)  
+                 .FirstOrDefault(p => p.PrestamoId == item.PrestamoId);
+            }
 
             return clientesPrestamosCuota.ToList(); // Convierte en lista para materializar la consulta
         }
